@@ -1,0 +1,35 @@
+﻿<Page x:Class="TestProject.MainPage.PageRegister"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:TestProject.MainPage"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="PageRegister">
+
+    <Grid Background="White">
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Email" Width="100"/>
+                <TextBox Name="Email" Width="100"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Full Name" Width="100"/>
+                <TextBox Name="Name" Width="100"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Password" Width="100"/>
+                <TextBox Name="Password" Width="100"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Repeat password" Width="100"/>
+                <TextBox Name="RepeatPassword" Width="100"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 20 0 0">
+                <Button Name="Reg" Content="Register" Margin="0 0 10 0" Width="100" Height="30" Click="Reg_Click"/>
+                <Button Name="Back" Content="Back" Width="100" Height="30" Click="Back_Click"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Page>

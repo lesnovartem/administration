@@ -1,0 +1,19 @@
+﻿<Page x:Class="TestProject.MainPage.PageSelected"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:TestProject.MainPage"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="PageSelected">
+
+    <Grid Background="White">
+        <Button Name="Back" Width="100" Content="Назад" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="20" Click="Back_Click"/>
+        <StackPanel VerticalAlignment="Center">
+            <Button Name="Earth" Width="250" Content="Выписка (Земля)" Click="Earth_Click"/>
+            <Button Name="PersonalAccount" Width="250" Content="Справка о работе по лиц. счет" Margin="0 10 0 0" Click="PersonalAccount_Click"/>
+            <Button Name="Order" Width="250" Content="Справка о работе по приказам" Margin="0 10 0 0" Click="Order_Click" />
+        </StackPanel>
+    </Grid>
+</Page>

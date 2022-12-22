@@ -1,0 +1,41 @@
+﻿<Page x:Class="TestProject.MainPage.PageMenuAdministr"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:TestProject.MainPage"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="PageMenuAdministr">
+
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+        <DataGrid Name="List" AutoGenerateColumns="False"  
+                      ScrollViewer.CanContentScroll="True" 
+                      ScrollViewer.VerticalScrollBarVisibility="Auto"
+                      ScrollViewer.HorizontalScrollBarVisibility="Auto">
+
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Номер" Binding="{Binding Id}"/>
+                    <DataGridTextColumn Header="ФИО" Binding="{Binding User.Name}"/>
+                    <DataGridTextColumn Header="Почта" Binding="{Binding User.Email}"/>
+                    <DataGridTextColumn Header="Сообщение" Binding="{Binding Message1}"/>
+                    <DataGridTextColumn Header="Дата" Binding="{Binding Date}"/>
+                    <DataGridTemplateColumn>
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Content="Ответить" Name="Send" Click="Send_Click"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+            <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button Name="Back" Height="30" Content="Назад"  Click="Back_Click" Margin="0 0 20 0"/>
+            <Button Name="delete" Content="Удалить" Height="30" Click="delete_Click"/>
+        </StackPanel>
+    </Grid>
+</Page>
